@@ -22,3 +22,5 @@ self.addEventListener('push', function (e) {
     self.registration.showNotification('We have added a new blog/podcast!', options)
     );
 });
+
+self.addEventListener('fetch',() => console.log("fetch"));
