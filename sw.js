@@ -4,7 +4,7 @@
 
 self.addEventListener('push', function (e) {
     var options = {
-        body: 'This notification',
+        body: 'Visit now!',
         icon: 'images/example.png',
         vibrate: [100, 50, 100],
         data: {
@@ -19,6 +19,6 @@ self.addEventListener('push', function (e) {
         ]
     };
     e.waitUntil(
-    self.registration.showNotification('Hello', options)
+    self.registration.showNotification('We have added a new blog/podcast!', options)
     );
 });
