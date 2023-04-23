@@ -11,6 +11,7 @@
 <body>
     
     <button onclick="subscribe()">SUB</button>
+    <div id="result"></div>
     
 
 </body>
@@ -21,13 +22,14 @@ addEventListener('load', async () => {
     console.log(sw)
 })
 
+let result = document.getElementById('result')
 async function subscribe() {
     let sw = await navigator.serviceWorker.ready;
     let push = await sw.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey: 'BOU-dlKoy3-aFElyPR4SLO8d6b4T7JvE9cAdiJJzKOiGysrvx6ddZ5FCwASvgCII1cWR4Aml3AKyRto33GSh16Q'
     })
-    console.log(JSON.stringify(push))
+    result.innerText = JSON.stringify(push)
 }
 
 </script>
