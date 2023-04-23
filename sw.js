@@ -5,7 +5,7 @@
 self.addEventListener('push', function (e) {
     var options = {
         body: 'Visit now!',
-        icon: 'images/example.png',
+        icon: 'images/volcano.jpg',
         vibrate: [100, 50, 100],
         data: {
             dateOfArrival: Date.now(),
